@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url("bg.jpg") no-repeat;
+    background-size: cover;
+    color: #111;
+}
+
+.draggable-elements {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    /* visibility: hidden; */
+}
+
+.draggable {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 0rem 0.5rem;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+
+.draggable:hover {
+    opacity: 0.5;
+}
+
+.droppable {
+    /* height: 6.5rem;
+    width: 6.5rem;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px dashed #111;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s; */
+    height: 6.5rem;
+    width: 6.55rem;
+    display: flex;
+    align-items: left;
+    float: left;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    border: 3px dashed #111;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+    margin-bottom: 60px;
+    /* visibility: hidden; */
+}
+
+.droppable span {
+    font-size: 1.25rem;
+    pointer-events: none;
+    /* The element is never the target of pointer events */
+}
+
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+    /* background-color: #bee3f0; */
+    border-width: 5px;
+    transform: scale(1.1);
+}
+
+.droppable.dropped {
+    border-style: solid;
+    color: #fff;
+}
+
+.droppable.dropped span {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.droppable.dropped i {
+    pointer-events: none;
+}
+
+.draggable.dragged {
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+
+.draggable.dragged:hover {
+    opacity: 0.1;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .draggable-elements {
+        margin: 1.5rem;
+    }
+}
+
+.heading {
+    width: 100%;
+    height: 16vh;
+    background-size: cover;
+    color: rgb(223, 150, 150);
+    text-align: center;
+    padding: 8px 8px;
+}
+
+.heading h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.dialogbox {
+    width: 50%;
+    height: 60vh;
+    align-items: center;
+    text-align: center;
+    margin-left: 320px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.primarybtn {
+    margin-top: 40px;
+    width: 200px;
+    height: 100px;
+    background: rgb(81, 81, 206);
+    color: rgb(240, 192, 192);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.options {
+    width: 50%;
+    height: 30vh;
+    background: transparent;
+    align-items: center;
+    padding: 8px;
+    text-align: center;
+    margin-left: 310px;
+}
+
+.playagain {
+    background: rgb(149, 149, 199);
+    color: #eee;
+    font-weight: bold;
+    margin-right: 50px;
+    font-size: 24px;
+}
+
+.playmore {
+    background: rgb(149, 149, 199);
+    color: #eee;
+    font-weight: bold;
+    font-size: 24px;
+}
